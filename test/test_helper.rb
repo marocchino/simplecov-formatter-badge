@@ -1,4 +1,8 @@
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "simplecov-formatter-badge"
+# frozen_string_literal: true
 
-require "minitest/autorun"
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+require 'simplecov'
+require 'simplecov-formatter-badge'
+SimpleCov.start
+
+require 'minitest/autorun'

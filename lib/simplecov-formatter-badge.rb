@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SimpleCov
   module Formatter
     class BadgeFormatter
@@ -6,7 +8,7 @@ module SimpleCov
       def format(result)
         persent = result.covered_percent.to_i
         color = color_by(persent)
-        File.open(result_file_path, "w" ) do |file|
+        File.open(result_file_path, 'w') do |file|
           file.write <<~XML
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="94" height="20">
             <linearGradient id="b" x2="0" y2="100%">
